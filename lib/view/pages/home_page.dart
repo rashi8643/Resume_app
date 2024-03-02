@@ -9,6 +9,16 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    void viewResume(int index) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ViewResumePage(
+              index: index,
+            ),
+          ));
+    }
+
     return Scaffold(
       backgroundColor: const Color(0xFF151515),
       appBar: AppBar(
@@ -25,12 +35,7 @@ class HomePage extends ConsumerWidget {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
             child: InkWell(
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const ResumeViewPage(),
-                ),
-              ),
+              onTap: () => viewResume(index),
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(4),
