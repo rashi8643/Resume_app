@@ -194,6 +194,15 @@ class AddResumePage extends HookConsumerWidget {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         backgroundColor: const Color(0xFF0ab6ab),
+        actions: [
+          IconButton(
+            onPressed: () => showAlertDialog(),
+            icon: const Icon(
+              Icons.done,
+              color: Colors.white,
+            ),
+          )
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.only(
@@ -209,13 +218,13 @@ class AddResumePage extends HookConsumerWidget {
             final controllers = sectionsList.value[index];
             return AddSectionWidget(
               titleController: controllers.titleController,
-              contentController: controllers.titleController,
+              contentController: controllers.contentController,
               onDeletePressed: () => removeSection(index),
               onUpPressed: () => moveSectionUp(index),
               onDownPressed: () => moveSectionDown(index),
             );
           },
-          itemCount: 2,
+          itemCount: sectionsList.value.length,
         ),
       ),
       bottomNavigationBar: SizedBox(
@@ -231,7 +240,7 @@ class AddResumePage extends HookConsumerWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
                 )),
-            onPressed: () {},
+            onPressed: () => addNewSection(),
             child: const Text(
               'Add New Section',
               style: TextStyle(

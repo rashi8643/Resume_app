@@ -49,6 +49,8 @@ class AddSectionWidget extends StatelessWidget {
                       color:
                           Color.fromARGB(255, 230, 221, 221).withOpacity(.30))),
               child: TextField(
+                controller: titleController,
+                style: TextStyle(color: Colors.white),
                 decoration: const InputDecoration(
                   contentPadding: EdgeInsets.symmetric(horizontal: 16),
                   border: InputBorder.none,
@@ -77,6 +79,8 @@ class AddSectionWidget extends StatelessWidget {
                       color: const Color.fromARGB(255, 230, 221, 221)
                           .withOpacity(.30))),
               child: TextField(
+                controller: contentController,
+                style: TextStyle(color: Colors.white),
                 decoration: const InputDecoration(
                   contentPadding: EdgeInsets.symmetric(horizontal: 16),
                   border: InputBorder.none,
@@ -92,19 +96,19 @@ class AddSectionWidget extends StatelessWidget {
                 children: [
                   const Expanded(child: SizedBox()),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: onUpPressed,
                       icon: const Icon(
                         Icons.arrow_upward,
                         color: Color.fromARGB(255, 230, 221, 221),
                       )),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: onDownPressed,
                       icon: const Icon(
                         Icons.arrow_downward_outlined,
                         color: Color.fromARGB(255, 230, 221, 221),
                       )),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: onDeletePressed,
                     icon: const Icon(
                       Icons.delete,
                       color: Color.fromARGB(255, 230, 221, 221),
