@@ -45,14 +45,7 @@ class AddResumePage extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
                 )),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => AddResumePage(),
-                ),
-              );
-            },
+            onPressed: () {},
             child: const Text(
               'Add New Section',
               style: TextStyle(
