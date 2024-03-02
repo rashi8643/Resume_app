@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_resume_task/view/add_resume_page.dart';
+import 'package:flutter_resume_task/view/pages/add_resume_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -22,8 +22,9 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
             child: Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(4),
-                  color: Colors.white12),
+                borderRadius: BorderRadius.circular(4),
+                color: Colors.white12,
+              ),
               child: const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 child: Column(
@@ -51,10 +52,13 @@ class HomePage extends StatelessWidget {
         },
         itemCount: 2,
       ),
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 70,
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 16,
+            vertical: 8,
+          ),
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF0ab6ab),
