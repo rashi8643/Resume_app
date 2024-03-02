@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
 
 class AddSectionWidget extends StatelessWidget {
+  final TextEditingController titleController;
+  final TextEditingController contentController;
+  final VoidCallback onDeletePressed;
+  final VoidCallback onUpPressed;
+  final VoidCallback onDownPressed;
   const AddSectionWidget({
     super.key,
+    required this.titleController,
+    required this.contentController,
+    required this.onDeletePressed,
+    required this.onUpPressed,
+    required this.onDownPressed,
   });
 
   @override
