@@ -46,11 +46,11 @@ class AddSectionWidget extends StatelessWidget {
               decoration: BoxDecoration(
                   border: Border.all(
                       width: 1,
-                      color:
-                          Color.fromARGB(255, 230, 221, 221).withOpacity(.30))),
+                      color: const Color.fromARGB(255, 230, 221, 221)
+                          .withOpacity(.30))),
               child: TextField(
                 controller: titleController,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 decoration: const InputDecoration(
                   contentPadding: EdgeInsets.symmetric(horizontal: 16),
                   border: InputBorder.none,
@@ -80,7 +80,7 @@ class AddSectionWidget extends StatelessWidget {
                           .withOpacity(.30))),
               child: TextField(
                 controller: contentController,
-                style: TextStyle(color: Colors.white),
+                style: const TextStyle(color: Colors.white),
                 decoration: const InputDecoration(
                   contentPadding: EdgeInsets.symmetric(horizontal: 16),
                   border: InputBorder.none,

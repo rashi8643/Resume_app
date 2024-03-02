@@ -62,12 +62,12 @@ class ViewResumePage extends ConsumerWidget {
                 children: [
                   Text(
                     resume.sections[index].title,
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    style: const TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   const SizedBox(height: 4),
                   Text(
                     resume.sections[index].content,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                     ),
                   ),
